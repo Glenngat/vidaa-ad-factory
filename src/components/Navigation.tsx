@@ -11,10 +11,10 @@ export const Navigation = () => {
   ];
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+    <nav className="fixed top-0 w-full z-50 glass-card backdrop-blur-md border-b border-primary/20">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <Link to="/" className="text-2xl font-bebas text-accent tracking-wider">
+          <Link to="/" className="text-2xl font-bebas text-primary tracking-wider glow-text">
             MAVIDAA
           </Link>
           
@@ -23,9 +23,9 @@ export const Navigation = () => {
               <Link
                 key={item.path}
                 to={item.path}
-                className={`font-roboto font-medium transition-smooth hover:text-accent ${
+                className={`font-roboto font-medium transition-glass hover:text-primary hover:glow-text ${
                   location.pathname === item.path 
-                    ? "text-accent" 
+                    ? "text-primary glow-text" 
                     : "text-muted-foreground"
                 }`}
               >

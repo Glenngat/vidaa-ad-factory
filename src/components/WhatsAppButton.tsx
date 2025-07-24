@@ -23,10 +23,10 @@ export const WhatsAppButton = ({
   };
 
   const variantClasses = {
-    primary: "bg-primary hover:bg-primary/90 text-primary-foreground hero-shadow",
-    secondary: "gold-gradient hover:opacity-90 text-secondary-foreground glow-shadow",
-    urgent: "urgent-gradient hover:opacity-90 text-urgent-foreground animate-pulse",
-    gold: "gold-gradient hover:opacity-90 text-secondary-foreground glow-shadow"
+    primary: "tech-gradient hover:opacity-90 text-primary-foreground tech-shadow transition-glass",
+    secondary: "electric-gradient hover:opacity-90 text-secondary-foreground neon-glow transition-neon",
+    urgent: "neon-gradient hover:opacity-90 text-urgent-foreground animate-pulse transition-neon",
+    gold: "electric-gradient hover:opacity-90 text-secondary-foreground neon-glow transition-neon"
   };
 
   return (

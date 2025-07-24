@@ -10,19 +10,27 @@ const HomePage = () => {
   const secondaryMessage = "Hi Mavidaa! I want to describe my ideal video ad and get a custom quote. Can you help me?";
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen relative overflow-hidden">
+      {/* Floating Tech Orbs */}
+      <div className="floating-orb w-32 h-32 bg-primary/20 top-20 left-10 animate-pulse"></div>
+      <div className="floating-orb w-24 h-24 bg-accent/30 top-1/3 right-20" style={{animationDelay: '2s'}}></div>
+      <div className="floating-orb w-40 h-40 bg-secondary/15 bottom-20 left-1/4" style={{animationDelay: '4s'}}></div>
+      
+      {/* Tech Grid Background */}
+      <div className="absolute inset-0 tech-grid opacity-30"></div>
+      
       {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4">
+      <section className="relative pt-24 pb-16 px-4 z-10">
         <div className="container mx-auto text-center">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-7xl font-bebas text-foreground mb-6 leading-tight">
+            <h1 className="text-5xl md:text-7xl font-bebas text-foreground mb-6 leading-tight glow-text">
               Your Competitors Are Using 
-              <span className="text-accent block">Video Ads</span>
+              <span className="text-primary block bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Video Ads</span>
               —Why Aren't You?
             </h1>
             
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 font-roboto">
-              Get a Custom Video Ad Sample for Just <span className="text-accent font-bold">$97</span>—or Describe Your Vision & We'll Quote You Instantly.
+              Get a Custom Video Ad Sample for Just <span className="text-secondary font-bold neon-glow">$97</span>—or Describe Your Vision & We'll Quote You Instantly.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
@@ -35,7 +43,7 @@ const HomePage = () => {
               </WhatsAppButton>
               
               <Link to="/describe" className="w-full sm:w-auto">
-                <Button variant="gold" size="lg" className="w-full">
+                <Button variant="gold" size="lg" className="w-full electric-gradient">
                   Describe Your Ad → Get Quote
                 </Button>
               </Link>
@@ -60,88 +68,82 @@ const HomePage = () => {
       </section>
 
       {/* Social Proof */}
-      <section className="py-16 px-4 bg-card">
-        <div className="container mx-auto">
+      <section className="relative py-16 px-4 z-10">
+        <div className="glass-card rounded-3xl p-8 container mx-auto">
           <h2 className="text-4xl font-bebas text-center mb-12">What Our Clients Say</h2>
           
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <Card className="card-shadow">
-              <CardContent className="p-6">
-                <div className="flex items-center mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-accent fill-current" />
-                  ))}
+            <div className="glass-card rounded-2xl p-6 transition-glass hover:scale-105">
+              <div className="flex items-center mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="h-5 w-5 text-accent fill-current" />
+                ))}
+              </div>
+              <p className="text-card-foreground mb-4 font-roboto">
+                "Mavidaa's ads tripled my sales in just 2 weeks! The quality is incredible and the turnaround time is unmatched."
+              </p>
+              <div className="flex items-center">
+                <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mr-3">
+                  <span className="text-secondary-foreground font-bold">SJ</span>
                 </div>
-                <p className="text-card-foreground mb-4 font-roboto">
-                  "Mavidaa's ads tripled my sales in just 2 weeks! The quality is incredible and the turnaround time is unmatched."
-                </p>
-                <div className="flex items-center">
-                  <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mr-3">
-                    <span className="text-secondary-foreground font-bold">SJ</span>
-                  </div>
-                  <div>
-                    <p className="font-semibold">Sarah Johnson</p>
-                    <p className="text-muted-foreground text-sm">E-commerce Owner</p>
-                  </div>
+                <div>
+                  <p className="font-semibold">Sarah Johnson</p>
+                  <p className="text-muted-foreground text-sm">E-commerce Owner</p>
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
 
-            <Card className="card-shadow">
-              <CardContent className="p-6">
-                <div className="flex items-center mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-accent fill-current" />
-                  ))}
+            <div className="glass-card rounded-2xl p-6 transition-glass hover:scale-105">
+              <div className="flex items-center mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="h-5 w-5 text-accent fill-current" />
+                ))}
+              </div>
+              <p className="text-card-foreground mb-4 font-roboto">
+                "Finally found a team that understands conversion! Our click-through rates increased by 400%."
+              </p>
+              <div className="flex items-center">
+                <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mr-3">
+                  <span className="text-secondary-foreground font-bold">MR</span>
                 </div>
-                <p className="text-card-foreground mb-4 font-roboto">
-                  "Finally found a team that understands conversion! Our click-through rates increased by 400%."
-                </p>
-                <div className="flex items-center">
-                  <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mr-3">
-                    <span className="text-secondary-foreground font-bold">MR</span>
-                  </div>
-                  <div>
-                    <p className="font-semibold">Mike Rodriguez</p>
-                    <p className="text-muted-foreground text-sm">Real Estate Agent</p>
-                  </div>
+                <div>
+                  <p className="font-semibold">Mike Rodriguez</p>
+                  <p className="text-muted-foreground text-sm">Real Estate Agent</p>
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
 
-            <Card className="card-shadow">
-              <CardContent className="p-6">
-                <div className="flex items-center mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-accent fill-current" />
-                  ))}
+            <div className="glass-card rounded-2xl p-6 transition-glass hover:scale-105">
+              <div className="flex items-center mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="h-5 w-5 text-accent fill-current" />
+                ))}
+              </div>
+              <p className="text-card-foreground mb-4 font-roboto">
+                "Best investment I've made for my gym. The video ads bring in 10+ new members monthly!"
+              </p>
+              <div className="flex items-center">
+                <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mr-3">
+                  <span className="text-secondary-foreground font-bold">LT</span>
                 </div>
-                <p className="text-card-foreground mb-4 font-roboto">
-                  "Best investment I've made for my gym. The video ads bring in 10+ new members monthly!"
-                </p>
-                <div className="flex items-center">
-                  <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mr-3">
-                    <span className="text-secondary-foreground font-bold">LT</span>
-                  </div>
-                  <div>
-                    <p className="font-semibold">Lisa Thompson</p>
-                    <p className="text-muted-foreground text-sm">Gym Owner</p>
-                  </div>
+                <div>
+                  <p className="font-semibold">Lisa Thompson</p>
+                  <p className="text-muted-foreground text-sm">Gym Owner</p>
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Pain Points */}
-      <section className="py-16 px-4">
+      <section className="relative py-16 px-4 z-10">
         <div className="container mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bebas mb-12">Stop Wasting Money on Ads That Don't Convert</h2>
+          <h2 className="text-4xl md:text-5xl font-bebas mb-12 glow-text">Stop Wasting Money on Ads That Don't Convert</h2>
           
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-12">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-urgent rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="glass-card rounded-2xl p-6 text-center transition-glass hover:scale-105">
+              <div className="w-16 h-16 bg-gradient-to-r from-urgent to-primary rounded-full flex items-center justify-center mx-auto mb-4 neon-glow">
                 <Play className="h-8 w-8 text-urgent-foreground" />
               </div>
               <h3 className="text-xl font-bebas mb-2">Tired of Expensive Studios?</h3>
@@ -150,8 +152,8 @@ const HomePage = () => {
               </p>
             </div>
             
-            <div className="text-center">
-              <div className="w-16 h-16 bg-urgent rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="glass-card rounded-2xl p-6 text-center transition-glass hover:scale-105">
+              <div className="w-16 h-16 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-4 neon-glow">
                 <CheckCircle className="h-8 w-8 text-urgent-foreground" />
               </div>
               <h3 className="text-xl font-bebas mb-2">Need Ads That Actually Convert?</h3>
@@ -160,8 +162,8 @@ const HomePage = () => {
               </p>
             </div>
             
-            <div className="text-center">
-              <div className="w-16 h-16 bg-urgent rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="glass-card rounded-2xl p-6 text-center transition-glass hover:scale-105">
+              <div className="w-16 h-16 bg-gradient-to-r from-secondary to-accent rounded-full flex items-center justify-center mx-auto mb-4 neon-glow">
                 <Clock className="h-8 w-8 text-urgent-foreground" />
               </div>
               <h3 className="text-xl font-bebas mb-2">Want Video Ready in 24 Hours?</h3>
@@ -171,7 +173,7 @@ const HomePage = () => {
             </div>
           </div>
 
-          <div className="bg-card rounded-2xl p-8 card-shadow max-w-2xl mx-auto">
+          <div className="glass-card rounded-3xl p-8 max-w-2xl mx-auto border border-primary/30">
             <h3 className="text-2xl font-bebas mb-4">Ready to See What We Can Do?</h3>
             <p className="text-muted-foreground mb-6 font-roboto">
               Get a custom sample video for just $97 (applied to your full order)
@@ -188,17 +190,17 @@ const HomePage = () => {
       </section>
 
       {/* As Seen On */}
-      <section className="py-16 px-4 bg-card">
-        <div className="container mx-auto text-center">
+      <section className="relative py-16 px-4 z-10">
+        <div className="glass-card rounded-3xl p-8 container mx-auto text-center">
           <p className="text-muted-foreground mb-8 font-roboto">As Featured In</p>
           <div className="flex justify-center items-center space-x-8 opacity-60">
-            <div className="bg-muted rounded-lg px-8 py-4 text-muted-foreground font-bebas text-lg">
+            <div className="glass-card rounded-lg px-8 py-4 text-muted-foreground font-bebas text-lg transition-glass hover:scale-105">
               TECH CRUNCH
             </div>
-            <div className="bg-muted rounded-lg px-8 py-4 text-muted-foreground font-bebas text-lg">
+            <div className="glass-card rounded-lg px-8 py-4 text-muted-foreground font-bebas text-lg transition-glass hover:scale-105">
               FORBES
             </div>
-            <div className="bg-muted rounded-lg px-8 py-4 text-muted-foreground font-bebas text-lg">
+            <div className="glass-card rounded-lg px-8 py-4 text-muted-foreground font-bebas text-lg transition-glass hover:scale-105">
               ENTREPRENEUR
             </div>
           </div>
