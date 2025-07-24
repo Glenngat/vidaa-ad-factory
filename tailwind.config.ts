@@ -18,6 +18,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'bebas': ['Bebas Neue', 'sans-serif'],
+				'roboto': ['Roboto', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -35,6 +39,10 @@ export default {
 				destructive: {
 					DEFAULT: 'hsl(var(--destructive))',
 					foreground: 'hsl(var(--destructive-foreground))'
+				},
+				urgent: {
+					DEFAULT: 'hsl(var(--urgent))',
+					foreground: 'hsl(var(--urgent-foreground))'
 				},
 				muted: {
 					DEFAULT: 'hsl(var(--muted))',
