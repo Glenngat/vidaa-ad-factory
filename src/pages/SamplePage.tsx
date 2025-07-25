@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { CheckCircle, ArrowRight, Star, Shield } from "lucide-react";
 
 const SamplePage = () => {
-  const sampleMessage = "Hi Mavidaa! I want to order a custom sample video for $97. Please send me the payment details and I'll describe my requirements!";
+  const sampleMessage = "Hi Mavidaa! I want to order a custom sample video for KES 3,500. Please send me the payment details and I'll describe my requirements!";
 
   return (
     <div className="min-h-screen pt-24 pb-16 px-4">
@@ -13,7 +13,7 @@ const SamplePage = () => {
         <div className="text-center mb-12">
           <h1 className="text-5xl md:text-6xl font-bebas mb-6">
             Get Your Custom Sample Video
-            <span className="text-accent block">For Just $97</span>
+            <span className="text-accent block">For Just KES 3,500</span>
           </h1>
           <p className="text-xl text-muted-foreground font-roboto mb-8">
             See exactly what we can do for your business—then apply this fee to your full order!
@@ -22,7 +22,7 @@ const SamplePage = () => {
           <div className="flex justify-center gap-4 mb-8">
             <Badge variant="secondary" className="px-4 py-2">
               <Shield className="mr-2 h-4 w-4" />
-              $97 Applied to Full Order
+              KES 3,500 Applied to Full Order
             </Badge>
             <Badge variant="secondary" className="px-4 py-2">
               <CheckCircle className="mr-2 h-4 w-4" />
@@ -93,8 +93,8 @@ const SamplePage = () => {
             
             <div className="border-t pt-6">
               <div className="bg-accent/10 rounded-lg p-6 text-center">
-                <h3 className="text-2xl font-bebas mb-2">Total Value: $497</h3>
-                <p className="text-3xl font-bebas text-accent mb-2">Your Price: $97</p>
+                <h3 className="text-2xl font-bebas mb-2">Total Value: KES 25,000</h3>
+                <p className="text-3xl font-bebas text-accent mb-2">Your Price: KES 3,500</p>
                 <p className="text-muted-foreground text-sm">
                   * This fee is 100% applied to your full video package when you upgrade
                 </p>
@@ -134,7 +134,7 @@ const SamplePage = () => {
               <div>
                 <h4 className="font-semibold mb-1">Risk-Free Guarantee</h4>
                 <p className="text-muted-foreground text-sm">
-                  If you're not completely satisfied, we'll refund your $97—no questions asked.
+                  If you're not completely satisfied, we'll refund your KES 3,500—no questions asked.
                 </p>
               </div>
             </div>
@@ -155,11 +155,11 @@ const SamplePage = () => {
               className="mb-4"
             >
               <ArrowRight className="mr-2 h-5 w-5" />
-              Pay $97 & Describe My Sample
+              Pay KES 3,500 & Describe My Sample
             </WhatsAppButton>
             
             <p className="text-sm text-muted-foreground">
-              Sample ready in 24 hours • $97 applied to full order • 100% money-back guarantee
+              Sample ready in 24 hours • KES 3,500 applied to full order • 100% money-back guarantee
             </p>
           </div>
         </div>

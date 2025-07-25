@@ -4,8 +4,8 @@ import { Badge } from "@/components/ui/badge";
 import { CheckCircle, Star, MessageCircle, Clock, Users } from "lucide-react";
 
 const PricingPage = () => {
-  const basicMessage = "Hi Mavidaa! I'm interested in your Basic Video Ads package starting from $497. Can you send me more details and availability?";
-  const premiumMessage = "Hi Mavidaa! I want to discuss your Premium Custom Video packages. I need something more advanced than the basic package. Please send me options and pricing!";
+  const basicMessage = "Hi Mavidaa! I'm interested in your Basic Video Ads package starting from KES 3,500. Can you send me more details and availability?";
+  const premiumMessage = "Hi Mavidaa! I want to discuss your Premium Custom Video packages starting from KES 25,000. I need something more advanced than the basic package. Please send me options and pricing!";
 
   return (
     <div className="min-h-screen pt-24 pb-16 px-4">
@@ -37,7 +37,7 @@ const PricingPage = () => {
               <CardTitle className="text-3xl font-bebas">Basic Video Ads</CardTitle>
               <p className="text-muted-foreground">Perfect for small businesses & startups</p>
               <div className="mt-4">
-                <span className="text-4xl font-bebas text-accent">From $497</span>
+                <span className="text-4xl font-bebas text-accent">From KES 3,500</span>
                 <p className="text-sm text-muted-foreground">*Price varies by complexity</p>
               </div>
             </CardHeader>
@@ -98,7 +98,7 @@ const PricingPage = () => {
               <CardTitle className="text-3xl font-bebas">Premium Custom Videos</CardTitle>
               <p className="text-muted-foreground">For serious businesses ready to scale</p>
               <div className="mt-4">
-                <span className="text-4xl font-bebas text-accent">Custom Quote</span>
+                <span className="text-4xl font-bebas text-accent">From KES 25,000</span>
                 <p className="text-sm text-muted-foreground">Tailored to your specific needs</p>
               </div>
             </CardHeader>
