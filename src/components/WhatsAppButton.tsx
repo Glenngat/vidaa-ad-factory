@@ -17,8 +17,8 @@ export const WhatsAppButton = ({
   className = ""
 }: WhatsAppButtonProps) => {
   const handleClick = () => {
-    const encodedMessage = encodeURIComponent(message);
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    // Use the direct WhatsApp link
+    const whatsappUrl = `https://wa.link/3qx0r4`;
     window.open(whatsappUrl, '_blank');
   };
 
