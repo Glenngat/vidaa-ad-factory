@@ -1,4 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
+import { LogoProcessor } from "./LogoProcessor";
 
 export const Navigation = () => {
   const location = useLocation();
@@ -15,7 +16,12 @@ export const Navigation = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-3">
-            <img src="/src/assets/mavidaa-logo.png" alt="Mavidaa" className="h-10 w-auto" />
+            <LogoProcessor
+              originalLogoPath="/lovable-uploads/516d6249-9450-4721-9bef-b4f130e3352e.png"
+              onProcessed={() => {}}
+              className="h-10 w-auto"
+              alt="Mavidaa"
+            />
             <span className="text-2xl font-bebas text-primary tracking-wider subtle-text-glow">MAVIDAA</span>
           </Link>
           
