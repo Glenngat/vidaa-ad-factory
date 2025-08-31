@@ -8,62 +8,72 @@
 
 @layer base {
   :root {
-    /* Subtle Glass Theme with Deep Blues */
-    --background: 220 30% 3%;
-    --foreground: 0 0% 95%;
+    /* Mavidaa Brand Colors - Based on Logo Blues */
+    --background: 220 30% 8%;
+    --foreground: 210 15% 92%;
 
-    --card: 220 25% 6%;
-    --card-foreground: 0 0% 92%;
+    --card: 220 25% 12%;
+    --card-foreground: 210 15% 92%;
 
-    --popover: 220 25% 6%;
-    --popover-foreground: 0 0% 92%;
+    --popover: 220 30% 8%;
+    --popover-foreground: 210 15% 92%;
 
-    /* Subtle Blue Primary */
-    --primary: 215 25% 45%;
-    --primary-foreground: 0 0% 98%;
+    /* Primary: Vibrant Blue from Logo */
+    --primary: 213 92% 58%;
+    --primary-foreground: 220 30% 8%;
 
-    /* Muted Blue Secondary */
-    --secondary: 220 15% 25%;
-    --secondary-foreground: 0 0% 95%;
+    /* Secondary: Cyan/Turquoise from Logo */
+    --secondary: 192 82% 52%;
+    --secondary-foreground: 220 30% 8%;
 
-    /* Glass Muted */
-    --muted: 220 20% 8%;
-    --muted-foreground: 0 0% 65%;
+    --muted: 220 20% 18%;
+    --muted-foreground: 217 15% 65%;
 
-    /* Soft Blue Accent */
-    --accent: 210 40% 55%;
-    --accent-foreground: 220 30% 3%;
+    --accent: 192 82% 52%;
+    --accent-foreground: 220 30% 8%;
 
-    /* Soft Red for Urgency */
-    --destructive: 0 60% 55%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 15% 92%;
 
-    /* Warm Orange Urgent */
-    --urgent: 25 80% 60%;
-    --urgent-foreground: 220 30% 3%;
+    /* Urgent: Vibrant Orange */
+    --urgent: 14 91% 60%;
+    --urgent-foreground: 0 0% 98%;
 
-    --border: 220 25% 15%;
-    --input: 220 25% 15%;
-    --ring: 217 91% 60%;
+    --border: 220 20% 20%;
+    --input: 220 20% 18%;
+    --ring: 213 92% 58%;
 
     --radius: 1rem;
 
-    /* Advanced Design Tokens for Glass Theme */
-    --glass-gradient: linear-gradient(135deg, hsl(220 25% 6% / 0.8), hsl(220 20% 8% / 0.6));
-    --subtle-gradient: linear-gradient(135deg, hsl(215 25% 45% / 0.1), hsl(210 40% 55% / 0.1));
-    --card-gradient: linear-gradient(135deg, hsl(220 25% 6% / 0.9), hsl(220 20% 8% / 0.7));
-    --hero-gradient: linear-gradient(135deg, hsl(220 30% 3%), hsl(215 25% 5%));
+    /* Brand Enhancement Colors */
+    --primary-light: 213 92% 68%;
+    --primary-dark: 213 92% 48%;
+    --secondary-light: 192 82% 62%;
+    --secondary-dark: 192 82% 42%;
+    --success: 142 76% 48%;
+    --warning: 45 93% 58%;
+
+    /* Advanced Design Tokens for Brand Theme */
+    --glass-gradient: linear-gradient(135deg, hsl(220 30% 6% / 0.9), hsl(220 20% 18% / 0.7));
+    --brand-gradient: linear-gradient(135deg, hsl(213 92% 58%), hsl(192 82% 52%));
+    --brand-gradient-reverse: linear-gradient(135deg, hsl(192 82% 52%), hsl(213 92% 58%));
+    --accent-gradient: linear-gradient(135deg, hsl(192 82% 52%), hsl(192 82% 62%));
+    --hero-gradient: linear-gradient(135deg, hsl(220 30% 8%), hsl(213 92% 58% / 0.1));
+    --tech-gradient: linear-gradient(135deg, hsl(213 92% 58%) 0%, hsl(192 82% 52%) 50%, hsl(213 92% 68%) 100%);
     
-    /* Glass Effects */
-    --glass-bg: hsl(220 25% 6% / 0.3);
-    --glass-border: hsl(210 40% 55% / 0.2);
-    --glass-shadow: 0 8px 32px 0 hsl(215 25% 45% / 0.2);
-    --subtle-glow: 0 0 20px hsl(215 25% 45% / 0.3);
-    --card-shadow: 0 20px 50px -12px hsl(215 25% 45% / 0.3);
+    /* Glass Effects with Brand Colors */
+    --glass-bg: hsl(220 30% 6% / 0.5);
+    --glass-border: hsl(213 30% 25% / 0.3);
+    --glass-shadow: 0 4px 16px -4px hsl(213 92% 58% / 0.3);
+    --brand-glow: 0 0 50px hsl(213 92% 58% / 0.2);
+    --brand-glow-strong: 0 0 80px hsl(213 92% 58% / 0.4);
+    --brand-shadow: 0 12px 32px -8px hsl(213 92% 58% / 0.4);
+    --card-shadow: 0 20px 50px -12px hsl(213 92% 58% / 0.3);
     
-    /* Animations */
-    --transition-glass: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-neon: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    /* Smooth Transitions */
+    --transition-glass: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-neon: all 0.3s ease-out;
+    --transition-brand: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -101,9 +111,9 @@
     @apply bg-background text-foreground font-roboto antialiased;
     background-image: 
       url('../assets/3d-background.jpg'),
-      radial-gradient(circle at 20% 80%, hsl(215 25% 45% / 0.08) 0%, transparent 50%),
-      radial-gradient(circle at 80% 20%, hsl(210 40% 55% / 0.06) 0%, transparent 50%),
-      radial-gradient(circle at 40% 40%, hsl(220 20% 8% / 0.4) 0%, transparent 50%);
+      radial-gradient(circle at 20% 80%, hsl(213 92% 58% / 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, hsl(192 82% 52% / 0.06) 0%, transparent 50%),
+      radial-gradient(circle at 40% 40%, hsl(220 30% 8% / 0.4) 0%, transparent 50%);
     background-size: cover, 100% 100%, 100% 100%, 100% 100%;
     background-attachment: fixed;
     background-position: center;
@@ -120,12 +130,23 @@
     background: var(--glass-gradient);
   }
   
-  .subtle-gradient {
-    background: var(--subtle-gradient);
+  .brand-gradient {
+    background: var(--brand-gradient);
   }
   
-  .card-gradient {
-    background: var(--card-gradient);
+  .tech-gradient {
+    background: var(--tech-gradient);
+    box-shadow: var(--brand-shadow);
+  }
+  
+  .electric-gradient {
+    background: var(--brand-gradient-reverse);
+    box-shadow: var(--brand-shadow);
+  }
+  
+  .neon-gradient {
+    background: linear-gradient(135deg, hsl(var(--urgent)), hsl(var(--warning)));
+    box-shadow: 0 0 40px hsl(var(--urgent) / 0.5);
   }
   
   .glass-card {
@@ -136,8 +157,20 @@
     box-shadow: var(--glass-shadow);
   }
   
-  .subtle-glow {
-    box-shadow: var(--subtle-glow);
+  .brand-glow {
+    box-shadow: var(--brand-glow);
+  }
+  
+  .brand-glow-strong {
+    box-shadow: var(--brand-glow-strong);
+  }
+  
+  .tech-shadow {
+    box-shadow: var(--brand-shadow);
+  }
+  
+  .neon-glow {
+    box-shadow: 0 0 30px hsl(var(--secondary) / 0.4);
   }
   
   .card-shadow {
@@ -148,14 +181,22 @@
     transition: var(--transition-glass);
   }
   
+  .transition-neon {
+    transition: var(--transition-neon);
+  }
+  
+  .transition-smooth {
+    transition: var(--transition-brand);
+  }
+  
   .floating-3d {
     animation: float3d 8s ease-in-out infinite;
   }
   
   .glass-grid {
     background-image: 
-      linear-gradient(hsl(215 25% 45% / 0.05) 1px, transparent 1px),
-      linear-gradient(90deg, hsl(215 25% 45% / 0.05) 1px, transparent 1px);
+      linear-gradient(hsl(213 92% 58% / 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(213 92% 58% / 0.05) 1px, transparent 1px);
     background-size: 30px 30px;
   }
   
@@ -179,6 +220,6 @@
   }
   
   .subtle-text-glow {
-    text-shadow: 0 0 10px hsl(215 25% 45% / 0.5), 0 0 20px hsl(210 40% 55% / 0.3);
+    text-shadow: 0 0 10px hsl(213 92% 58% / 0.5), 0 0 20px hsl(192 82% 52% / 0.3);
   }
 }

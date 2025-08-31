@@ -18,7 +18,7 @@ export const WhatsAppButton = ({
 }: WhatsAppButtonProps) => {
   const handleClick = () => {
     // Use the direct WhatsApp link
-    const whatsappUrl = `https://wa.link/3qx0r4`;
+    const whatsappUrl = `https://wa.link/0cb4zp`;
     window.open(whatsappUrl, '_blank');
   };
 
