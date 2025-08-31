@@ -24,10 +24,9 @@ export const Navigation = () => {
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-3">
             <img
-              src="/lovable-uploads/0c59d8ed-1ff3-4078-b80d-c272e72a751d.png"
+              src="/lovable-uploads/7f171536-c30f-4080-b96b-78b91e469f74.png"
               alt="Mavidaa"
-              className="h-10 w-10 object-contain"
-              style={{ clipPath: 'inset(0 50% 60% 0)' }}
+              className="h-10 w-auto object-contain"
             />
             <span className="text-2xl font-bebas text-primary tracking-wider subtle-text-glow">MAVIDAA</span>
           </Link>
